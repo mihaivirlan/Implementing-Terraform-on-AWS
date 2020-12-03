@@ -2,6 +2,7 @@
 # VARIABLES
 #############################################################################
 
+
 variable "region" {
   type    = string
   default = "us-east-1"
@@ -29,8 +30,8 @@ variable "database_subnets" {
 #############################################################################
 
 provider "aws" {
-  version = "~> 2.0"
-  region  = var.region
+  shared_credentials_file = "/home/mihail/.aws/credentials"
+  region = "us-east-1"
 }
 
 #############################################################################
